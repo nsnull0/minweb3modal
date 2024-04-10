@@ -1,18 +1,9 @@
 'use client'
 
-import Web3ModalProvider from "@/app/context"
 import { useWeb3Modal } from "@web3modal/wagmi/react"
 import { useAccount, useDisconnect } from "wagmi"
 
 const Web3UI = () => {
-    return (
-        <Web3ModalProvider>
-            <Web3UICtx />
-        </Web3ModalProvider>
-    )
-}
-
-const Web3UICtx = () => {
     const { open } = useWeb3Modal()
 
     const { isConnected } = useAccount()
